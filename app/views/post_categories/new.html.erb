@@ -1,5 +1,16 @@
-<%= form_for @post_category do |f| %>
-  <%= f.collection_select :post_id, current_user.posts, :id, :title %>
-  <!-- 実装してください -->
-  <%= f.submit class:"form__items form__items--submit"  %>
+<%= form_with(model:@post_category) do |form| %>
+	<%= form.fields_for :posts, @post_category.post do |form| %>
+		<%= form.label :投稿 %>
+		<%= form.collection_select :post_id, PostCategory.all, :id, :name %>
+	<% end %>
+	
+	<%= form.fields_for :categories, @post_category.category do |form| %>
+		<%= form.label :カテゴリ %>
+		<%= form.collection_select :category_id, PostCategory.all, :id, :name %>
+	<% end %>
+
+	<div class="actions">
+    <%= form.submit %>
+	</div>
 <% end %>
+

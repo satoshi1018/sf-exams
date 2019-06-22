@@ -5,7 +5,7 @@
   </div>
   <div class="posts-container">
     <h2 class="center">投稿一覧</h2>
-    <%= link_to 'カテゴリの作成', '#', style:"margin-left:10px;" %>
+    <%= link_to 'カテゴリの作成', new_post_category_path(@post_category), style:"margin-left:10px;" %>
     <%= render partial: 'posts/post', collection: @posts %>
     <%= will_paginate @posts %>
   </div>
