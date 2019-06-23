@@ -26,6 +26,11 @@
       <% end %>  
     </div>
     <div>
+      <%= link_to new_category_path, class:"header__items__item accent" do %>
+        <strong><i class="fa fa-pencil-square-o" aria-hidden="true"></i>new category</strong>
+      <% end %>  
+    </div>
+    <div>
       <%= link_to logout_path, class:"header__items__item change-border01 button" do %>
         <span class="change-border01__inner"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</span>
       <% end %>

@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comments = @post.comments
+    @post_category = PostCategory.all
   end
 
   def new
@@ -57,8 +58,10 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :content)
   end
 
-  def correct_user?
-    # 実装してください
-    return true if current_user.true
+  def correct_user? # 実装してください
+    unless current_user?
+      flash[:warning] = "ユーザーが正しくありません"
+      redirect_to root_url 
+    end
   end
 end
