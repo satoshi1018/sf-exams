@@ -1,0 +1,8 @@
+<div class="categories-show">
+    <h2 class="center">カテゴリ一覧</h2>
+    <h2><%= @category.name %></h2>
+    <%= link_to 'カテゴリの作成', new_category_path, style:"margin-left:10px;" %>
+    <%= link_to '投稿の作成', new_post_path, style:"margin-left:10px;" %>
+</div>
+
+<%= link_to '戻る', categories_path, class: 'center', style: 'margin: 20px 0px;' %>

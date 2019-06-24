@@ -1,0 +1,7 @@
+<% provide(:btn_text, '作成する') %>
+<div class="categories--new">
+  <%= form_for @category, class:"form" do |c| %>
+    <%= render 'form', f:c %>
+  <% end %>
+</div>
+<%= link_to '戻る', root_path, class: 'center', style: 'margin: 20px 0px;' %>

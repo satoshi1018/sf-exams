@@ -1,0 +1,5 @@
+<h1>カテゴリ一覧</h1>
+<%= render @categories %>
+
+<%= link_to '戻る', posts_path, class: 'center', style: 'margin: 20px 0px;' %>  |  
+<%= link_to 'カテゴリとポスト接続を接続する', new_post_category_path, class: 'center', style: 'margin: 20px 0px;' %>
