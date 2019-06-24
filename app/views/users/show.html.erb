@@ -7,7 +7,7 @@
     <h2 class="center">投稿一覧</h2>
     <%= link_to 'カテゴリの作成', new_category_path, style:"margin-left:10px;" %>
     <%= link_to '投稿の作成', new_post_path, style:"margin-left:10px;" %>
-    <%= link_to '編集', edit_user_path(@user), style:"margin-left:10px;" %></td>
+    <%= link_to '編集', edit_user_path(@user), style:"margin-left:10px;" %></td> |
     <%= link_to '削除', @user, method: :delete, data: { confirm: '削除してもよろしいですか?' }, style:"margin-left:10px;" %></td>
     <%= render partial: 'posts/post', collection: @posts %>
     <%= will_paginate @posts %>

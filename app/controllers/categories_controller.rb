@@ -29,7 +29,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @category.destroy
     flash[:success] = "カテゴリの削除が完了しました"
-    redirect_to 'index'
+    redirect_to categories_path
   end
 
   def index
