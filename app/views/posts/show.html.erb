@@ -5,9 +5,9 @@
     <div style="border-top: solid 1px #777;">
       <h2 class="center">カテゴリ名</h2>
 
-
-      <h3><%= @post_category.category.name %></h3> 
-      
+      <% @post_categories.each do |post_category| %>
+        <h3><%= post_category.category.name %></h3>
+      <% end %> 
       
       <h2 class="center">コメント一覧</h2>
       <%= render @comments %>
